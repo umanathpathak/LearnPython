@@ -1,0 +1,36 @@
+mystr = "How such documents are actually stored depends on the file format. For example, HTML uses the <p> tag as a paragraph container. In plaintext files, there are two common formats. Pre-formatted text will have a newline at the end of every physical line, and two newlines at the end of a paragraph, creating a blank line. An alternative is to only put newlines at the end of each paragraph, and leave word wrapping up to the application that displays or processes the text."
+
+#1) How many sentences are there in mystr?
+mystr.count('.')      #ans: 5
+
+#2) How many words are there in mystr?
+mystr.count(' ') + 1  #ans: 83
+
+#3) What is the length of mystr?
+len(mystr)          #ans:  470
+
+#4) Capitalize each word of mystr
+mystr.title()       #Capitalize each word, not converting string to upper case.
+
+#5) How many times vowels are appearing in mystr?
+mystr.lower().count('a') + mystr.lower().count('e') + mystr.lower().count('i') + mystr.lower().count('o') + mystr.lower().count('u')  #ans:  140
+
+#6) How many times 't' appears in mystr?
+mystr.count('t')    #ans: 37
+
+#7) replace all 'r' by 's'
+mystr.replace('r','s')
+
+#8) What is at the position 35?
+mystr[34]      #ans: 'o' - position 35, so index is 34, index in python starts from ......!! Yes..
+
+#9) Check whether 'paragraphs' is part of the above string?
+mystr.__contains__('paragraphs')  #ans: False, that means it is not part of string
+mystr.count('paragraphs')       #ans: 0 ,that means it is not part of string
+mystr.index('paragraphs')       #ans: Throws exception, substring not found
+mystr.find('paragraphs')        #ans: -1, substring not found
+
+#10) Reverse mystr.
+mystr[::-1]     #It was easy, right? Now can you read the reverse string? Try it. Its fun.
+
+#Hope you enjoyed solving above problems! If you see any issue, please fell free to contact me.

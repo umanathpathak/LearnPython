@@ -1,0 +1,30 @@
+mystr = "How such documents are actually stored depends on the file format. For example, HTML uses the <p> tag as a paragraph container. In plaintext files, there are two common formats. Pre-formatted text will have a newline at the end of every physical line, and two newlines at the end of a paragraph, creating a blank line. An alternative is to only put newlines at the end of each paragraph, and leave word wrapping up to the application that displays or processes the text."
+
+#1) How many sentences are there in mystr?
+
+
+#2) How many words are there in mystr?
+
+
+#3) What is the length of mystr?
+
+
+#4) Capitalize each word of mystr
+
+
+#5) How many times vowels are appearing in mystr?
+
+
+#6) How many times 't' appears in mystr?
+
+
+#7) replace all 'r' by 's'
+
+
+#8) What is at the position 35?
+
+
+#9) Check whether 'paragraphs' is part of the above string?
+
+
+#10) Reverse mystr.
