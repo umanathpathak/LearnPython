@@ -1,0 +1,11 @@
+#Install virtualenv package by pip installer
+pip install virtualenv
+
+#Create virtual env
+cd <go_to_project_dir>
+virtualenv <virtualenv_name>    #This will create <virtualenv_name> directory in current path.
+
+#Activate virual env
+cd <go_to_project_dir>
+./<virtualenv_name>/Scripts/activate.bat  #in case of windows
+./<virtualenv_name>/Scripts/activate.sh  #in case of linux
