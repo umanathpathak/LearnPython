@@ -1,0 +1,60 @@
+
+General Task: For each Task create an object of class and print all attributes and call all the methods of a class.
+Also for each class create a constructor and pass logical arguments which you think required and store them in object attributes..
+
+
+Task1:
+Write a Python class 'MyClass' which has two methods get_String() and print_String(). 
+get_String accept a string from the user and print_String print the string in upper case.
+
+
+
+Task2:
+Write a Python class named 'Rectangle' constructed by a length and width of a rectangle.
+Call method print_area() to print the area.
+
+
+Task3:
+Write a class 'Animal' having (age,gender) as attributes and isMammal() method which prints "I am Mammal animal".
+
+
+Task4:
+Create three classes Duck,Fish and Zebra. These 3 classes inherit Animal class (Task3 class).
+Duck has (beakColor,swim(),quack())
+Fish has (sizeInFt,canEat,swim())
+Zebra has (is_wild,run()).
+Note: Here attribute are without paranthesis and with paranthesis are methods of a class.
+
+Create object of all 3 child classes and print all the methods.
+
+
+Task5:
+Write a Python class named 'Circle' constructed by a radius and two methods which will compute the area and the perimeter of a circle.
+
+
+Task6:
+Create a class 'Shape' with below properties:
+Attributes:
+shape_type
+color
+filled
+
+methods:
+print_shape()  - should print shape_type
+print_area()  - should print message "I am asked for area of shape"
+
+
+Task7:
+Create two classes which inherit the above 'Shape' class:
+1)Circle  - radius, print_area()
+2)Rectangle - width, length, print_area()
+
+here in child class, it should calcualte area of respective shape. 
+it should first print the message of parent class print_area() method and then print the area of the shape in new line.
+
+Hint: This exercise is for method overriding purpose.
+
+
+Task8:
+Now create 2 Cirlce objects and 3 rectangle objects with different radius and width/length.
+Now pass all these 5 objects to some for loop and call print_shape() and print_area() methods on each object.

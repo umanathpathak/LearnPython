@@ -1,0 +1,81 @@
+
+
+Task1:
+#Create a function to swap the case of the string. If it upper case then convert it to lower case and vice versa.
+def swap_case(string):
+    if string.isupper():
+        retrun string.lower()
+    else:
+        return string.upper()
+
+Task2:
+#Convert the above function to lambda function.
+l = lambda string : string.lower() if string.isupper() else string.upper()
+
+
+Task3:
+Create a lambda function to reverse a string.
+l = lambda x : x[::-1]
+
+
+Task4:
+use the above crete created lambda function and apply it to below list:
+['Aasopalav', 'TejeT', 'Coconut', 'PopoP', 'Pipal', 'Apple', 'Juice', 'AmomA']
+
+lst = ['Aasopalav', 'TejeT', 'Coconut', 'PopoP', 'Pipal', 'Apple', 'Juice', 'AmomA']
+ans = map(l,lst)
+for i in ans: print(i)
+
+
+Task5:
+Use filter and map functions to output only those members from the above list which are palindrome. (reverse is same as origional string)
+
+x =  filter(lambda x:True if x==x[::-1] else False,lst)
+for i in x:
+    print(i)
+
+
+Task6:
+Use reduce function to add the above output and make a single string.
+Output should be: 'TejeT PopoP AmomA'
+
+from functools import reduce
+out = reduce(lambda x,y:x + " " + y,x)
+print(out)
+
+
+Task7:
+Use reduce function to get the multiplication of the below list:
+l = [4,7,2,9,4,5,3,5]
+out = reduce((lambda x,y:x*y),l)
+
+Task8:
+Create a function 'sumall' to accept any number of integer values and return the sum of them.
+from functools import reduce
+def sumall(*args):
+    num = list(args)
+    return reduce((lambda x,y:x+y),num)
+    
+sumall(1,2,3,4,5)
+
+Task9:
+Create a function 'numvsstring' to accept any number or string as arguments and return two different lists, one with numbers and one with strings.
+def numvsstring(*args):
+    l_num = list(filter(lambda i:True if isinstance(i,int) else False,args))
+    l_str = list(filter(lambda i:True if isinstance(i,str) else False,args))
+    return l_num, l_str
+
+numvsstring("Nilesh",34,56,67,"Mayura",34,12,"Arnav")
+
+
+Task10:
+Create a function 'hotornot' to accept any number of actress names with value 'hot' and 'nothot' as value.
+Return only those actress names which have value as hot.
+
+def hotornot(**kargs):
+    
+    g = set(map(lambda tup:tup[0] if tup[1]=='hot' else '',kargs.items()))
+    g.remove('')
+    return list(g)
+                
+hotornot(katrina='hot',deepika='nothot',karishma='hot',kareena='nothot')

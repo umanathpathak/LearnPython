@@ -1,0 +1,84 @@
+Task1:
+#Create a module having one function 'add2nums' for adding two values.
+#Create another module importing the above module in it and call the 'add2nums' function passing two numbers entered by the user.
+
+#module1.py
+def add2nums(num1,num2):
+    return num1 + num2
+
+#module2.py
+import module1
+module1.add2nums(3,5)
+
+Task2:
+#Create a module having a list as below:
+    
+#module1.py
+l = [10,21,40,35,22,60,52]
+
+#Create another module which imports the above module and change the value of the 2nd member (40) to 80 and print the updated list.
+#module2.py
+import module1
+module1.l[2] = 80
+print(module1.l)
+
+
+Task3:
+#Create a module 'home.py'. If this module is called directly then print a message 'This is my home. I can do whatever.'
+If this module is imported then print a message 'I am imported from some module, so I can't do eveything.'
+
+#home.py
+if __name__ == "__main__":
+    print("This is my home. I can do whatever.")
+else:
+    print("I am imported from some module, so I can't do eveything.")
+
+
+
+
+Task4:
+#Create a package 'module_arithmatic' having 4 modules:
+#module_sum : having one function for addition of two nums
+#module_sum.py
+def m_sum(x,y):
+print(x+y)
+
+#module_sub: having function for subtraction of two nums
+#module_sub.py
+def m_sub(x,y):
+    print(x-y)
+    
+#module_mul: having function for multiplication of two nums
+#module_mul.py
+def m_mul(x,y):
+    print(x*y)
+    
+#module_div: having function for division of two nums
+#module_div.py
+def m_div(x,y):
+    print(x/y)
+    
+#Import these 4 modules from the above package. and do the arithmatic oprations.
+
+import module_arithmatic.module_sum as p_sum
+import module_arithmatic.module_sub as p_sub
+import module_arithmatic.module_mul as p_mul
+import module_arithmatic.module_div as p_div
+
+p_sum.m_sum(5,6)
+p_sub.m_sub(5,6)
+p_mul.m_mul(5,6)
+p_div.m_div(5,6)
+
+
+Task5:
+#Create a package 'parent_pkg'.
+#Create a subpackage within 'parent_pkg' as'child_pkg'
+#create another subpackahe within 'child_pkg' as 'grandchild_pkg'
+#Create a module within 'grandchild_pkg' having one print message that 'I am grand child.'
+#grandchild.py
+print("I am grand child.")
+
+#Import the module in the grandchild_pkg' and print the message.
+import parent_pkg.child_pkg.grandchild_pkg.grandchild
+    

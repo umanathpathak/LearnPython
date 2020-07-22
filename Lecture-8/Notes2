@@ -1,0 +1,70 @@
+##-----------------------------------------------------------##
+#--------------Regular Expression:----------------------------#
+##-----------------------------------------------------------##
+
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct  2 16:17:06 2018
+
+@author: ankit
+"""
+#Check for valid email id
+import re
+email_id = "00000ankitagrawal579@gmail.com"
+
+pattern = "[a-zA-Z][a-zA-Z0-9._-]{5,}@[a-zA-Z0-9]{3,}.[a-zA-Z]{2,3}"
+
+
+s = re.search(pattern,email_id)
+s.start() > 0 then valid email id
+s.end()
+
+
+#Check for valid mobile number in US-style
+mob = '689-877-0622'
+pattern = '[6-9][\d]{2}[-][\d]{3}[-][\d]{4}'
+
+try:
+    if re.search(pattern,mob).start() == 0:
+        print("Valid Mob Number")
+    else:
+        print("Invalid Mob Number")
+except:
+    print("Invalid Mob Number")
+    
+r = re.search(pattern,mob)
+r.start()
+r.end()
+
+
+
+
+##-------------------------------------------------------##
+#-----------Decorators------------------------------------#
+##-------------------------------------------------------##
+
+def my_mood(duplicate_func):
+    print("Hey I want to print this")
+    duplicate_func()
+    print("I have printed it now")
+    
+
+@my_mood    #This works as On/Off switch
+def str_duplicate():
+    s = 'pen'
+    print(s*2)
+    
+str_duplicate()
+
+duplicate_func = str_duplicate
+duplicate_func()
+
+my_mood(duplicate_func)
+
+#some other funcitonlity
+#Existing functionality
+#some extra functionlity
+
+
+
+

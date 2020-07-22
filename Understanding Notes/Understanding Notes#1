@@ -1,0 +1,188 @@
+
+#Given the names and grades for each student in a Physics class of  students, 
+#store them in a nested list and print the name(s) of any student(s) 
+#having the second lowest grade.
+#
+#Note: If there are multiple students with the same grade, 
+#order their names alphabetically and print each name on a new line.
+
+Sample Input 
+
+5
+Harry
+37.21
+Berry
+37.21
+Tina
+37.2
+Akriti
+41
+Harsh
+39
+
+
+Sample Output 
+
+Berry
+Harry
+
+#-> How to approach such problems?
+#
+#Lets walk through it step by step. 
+#
+#we need to first read number of strudents from the user. We know that input() does this for us.
+#But it will return me a string output, so lets convert it to integer. because later I will pass this number to range function.
+
+no_of_stud = int(input())
+
+#now for each student we need to read his/her name and physics marks. So again we need to use input function for the same.
+#Now the marks is a float number so instead of converting it to int, lets convert it to float.
+#and I will store this as a (name,score) pair in a list.
+
+#these 5 lines does this for us.
+marksheet = []
+for i in range(no_of_stud)):
+    name = input()
+    score = float(input())
+    marksheet.append([name,score])
+    
+#alternate way to do this is to use list comprehesion. How to do it? Remember?
+#Lets recap it one more time. 
+#As we can see on the 5th line, marksheet is our outut list. and we want to add name and score in that list.
+#Note here, it is nested list, list within a list. Because I want to store (name, score) pairs in the list.
+
+#so list would look something like this:
+#marksheet = [[name1,score1],[name2,score2]]
+
+#as we will be using list comprehesion, and there is no filter or if condition, our task is easy.
+
+#what I will do now is, lets read input from user for name and score and pass it to a list.
+#something like this
+#[input(), float(input())]
+
+#this first input() will read names and second input() will read score.
+#and I will repeat this for all students means no_of_stud time.
+#[input(), float(input())] for i in range(no_of_stud)
+
+#Easy. right? 
+# Now as I want my final answer to be a list, I will enclose this within []
+#[[input(), float(input())] for i in range(no_of_stud)]
+
+#and I want my answer to be stored some where, so lets pass this to marksheet variable.
+#so final sysntax will look like this:
+
+marksheet = [[input(), float(input())] for i in range(no_of_stud)]
+
+#now enter student names and scores. and now if you see in the variable explorer, marksheet list is created in the desired format.
+
+
+#I hope till this point it is clear. If not then go through this one more time.
+
+
+#Now lets move to next step. We need the 2nd lowest score.
+#So lets first separate score from the marksheet list.
+
+#below for loop does that for us.
+scores = []
+for (name,score) in marksheet:
+    scores.append(score)
+    
+#So here in the above for loop, I am reading marksheet iterator and as it is returning a list (the nested one)
+#I will pass name,score to read both the values from the inner list -> [name1,score1]
+#now I have name and score, but I am interested only in the score, so I am storing it in scores list.
+    
+#Lets convert this above for loop into list comprehension.
+
+#scores is my final list, so it will go on the left hand side of the = sign.
+#and I want to add score to it, so score will be on the left side of the for keyword.
+
+#something like this:    
+#scores = score for (name,score) in marksheet
+
+#but I want list comprehension, so lets enclose right side expression within  []
+
+scores = [score for (name,score) in marksheet]
+
+
+#Easy? Right? Now we are comfortable with the list comprehension.
+
+#Now next step:
+#we need the 2nd lowest score. 
+
+#how to get it? ammmmmmm...........
+
+#if I sort this in the ascending order and If I get 2nd number of the sorted seq ,I will get 2d lowest score. Right? 
+#Let read above line one more time.
+
+#if I sort list in the ascending order so 2nd number(index position 1) is 2d lowest score.
+
+#But hold on.!! What if I have lowest socre repeated? Right. That is possible. 
+# Lets say 22.45 is the lowest score, and it is possible that more than 1 students have this score. 
+#In that case reading index 1 from the list will be the lowest score only, not the 2nd lowest score.
+
+#Now, because list doesn't have any function which removes duplicates, stuck again!!
+
+#Don't worry, we have sets. 
+#Remember, sets don't allow duplicate values.Lets take help from sets now.
+
+#So if I pass my list to set, it will rmeove the duplicates.
+#set(scores)
+
+#now we need to sort this. But wait now sets don't have sort method.
+#So lets again convert it to list.
+
+#list(set(scores))
+
+#Cool. Now my list doesn't have any duplicates.
+
+#Now I am good go to sort. 
+#list(set(scores)).sort()
+
+#If I use list's sort method, it will do the in-place sorting of the list. 
+#and as my intermediate result is not stored anywhere, I have no reference to this list, so I cannot use this anywhere in my program.
+#sort() return None as output.
+
+#So either you save the list before sorting it like this and then sort it:
+int_list_score = list(set(scores))
+int_list_score.sort()
+
+#or you can use sorted() built-in function to sort the list. and it returns list as output.
+#sorted(list(set(scores)))
+
+#now we need 2nd lowest score, so I will take the 2nd member from this list.
+#Lets save this in some variable.
+second_highest = int_list_score[1]
+#Or
+second_highest = sorted(list(set(scores)))[1]
+
+
+#So far so good. 
+
+#Now whoever student has score = second_highest, that is my output.
+
+#so lets go back to marksheet list, and compare this score with all student score and 
+#whoever has a match, I will add them to my final list.
+
+#below for loop does this taks.
+names = []
+for name,score in marksheet:
+    if score == second_highest:
+        names.append(name)
+        
+#Note that it is not necessary to give paranthesis around name and score, without paranthesis also it works.
+#Now lets convert this to list comprehension.
+
+
+#Try yourself to conevert this to list comprehension.
+
+#You should get something like this:
+names = [name for name,score in marksheet if score==second_highest]
+
+#now we need to sort them in scending order as there could be multiple students.
+names.sort()
+
+#now lets print them.
+print(names)
+
+#or if you want to print them in multiple lines, go with this:
+print('\n'.join(names))

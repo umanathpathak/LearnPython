@@ -1,0 +1,56 @@
+Task1:
+Create a function 'cube' to return the cube of the number.
+
+cube(3) should return 27.
+
+
+
+Task2:
+Create a function 'magical_power' to return the square of a number if number is even else return the cube of a number.
+magic_power(4) should return 16
+magic_power(5) should retune 125
+
+
+
+Task3:
+Create a function 'listsum' to return the sum of the list.
+l = [1,5,8,3]
+listsum(l) should return 17.
+
+
+
+Task4:
+Create a function 'printboard' to draw a n*m list in n rows and m column format.
+For example, if my list is 
+[[1,4,5],[2,4,6],[2,4,1],[5,2,4]]  - this is 4*3 dimension list. It has 4 members and each member has 3 members.
+
+so it should print output like this:
+1 4 5
+2 4 6
+2 4 1
+5 2 4
+
+
+
+Task5:
+Create a function 'validator' to check whether a given string is palindrome or not.
+Palindrome means the string read from left to right is same as read from right to left. 
+That means the reverse of the string is same as origional string.
+For example, 'Never odd or eve' is same even if read from right to left. so this is palindrome.
+more examples, radar, refer, level
+
+validator('level') should return True
+validator('python') should return False
+
+
+
+
+Task6: Create a function 'random' to generate given number times random numbers between 0  to 100.
+ramdom(2) should return two random numbers between 0 to 100. 
+Take help from google to know how to generate a random number. Hint: import random
+
+
+
+
+Task7: Create a function 'calcualte_area' to calcuate area of circle.(formula of area of a circle = 3.14*radius*radius)
+For example, radium=5; calcualte_area(radius) should return 78.5.

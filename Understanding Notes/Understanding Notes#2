@@ -1,0 +1,86 @@
+
+#Our task is to create a function to validate the email address. 
+#Let's first understand few valid email addresses. 
+#myname.nickname@gmail.com
+#superdupercool@yahoo.com
+#pythonistgeek@santabnata.com
+
+#All of these are valid email addresses. 
+
+#Now lets see invalid email addresses:
+#rahulgandhi_pappu.com@
+#mylifemyrules@gmail@com
+#iamsupercool@yahoo
+
+#Why you say above 3 are inalid email addresses?
+
+#Because they are not following the rules to make them a valid address. What are those rules?
+
+#that email address should cotain some name, followed by @, followed by some name, followed by '.' and then some name.
+
+#somename@url.extension
+
+#Now lets write a function which will do the same thing:
+
+#The first line will be def and then function name. Our function will have one argument, the string which we will validate.
+def check_valid(email):
+    
+    
+#Now it should contain atleast one '@' and '.'. So lets first split our string by '@'
+#the first part will be our username and 2nd will be the URL.
+    try:
+        username, url = email.split("@")
+        
+#Now URL should have atleast one '.'. Because '.' should come only after '@'. 
+#Lets call first part as Website and 2nd part as extension.
+        website, extension = url.split(".")
+    except ValueError:
+        return False
+
+#Now for our username, lets see whether it is valid username or not. 
+#Valid user name contains characters [a-z], numbers [0-9], and '-','_' and '.'.
+
+#We have isalnum function to check whether string is alpha numeric.
+#But we also have '-', '_' and '.'. so Lets first replace these 3 chanracter by Empty string and thenc check with isalnum().
+#If it is not followed then our string is not valid, and return false in that case.
+    if username.replace("-", "").replace("_", "").replace(".","").isalnum() is False:
+        return False
+        
+#if now check website is alphanumeric or not. Website can not even have '.' or '-' or '_'.. So we can simply chek with isalnum().
+    elif website.isalnum() is False:
+        return False
+        
+#Now extension's turn. Extension should be alphabatic only and length should be less than 3.
+    elif len(extension) > 3 and extension.isalpha():
+        return False
+    else:
+        
+#if all above rules are passes then it is a valid email address.
+        return True
+
+#So the full function will be like below:
+def check_valid(email):
+    try:
+        username, url = email.split("@")
+        website, extension = url.split(".")
+    except ValueError:
+        return False
+    
+    if username.replace("-", "").replace("_", "").isalnum() is False:
+        return False
+    elif website.isalnum() is False:
+        return False
+    elif len(extension) > 3:
+        return False
+    else:
+        return True
+        
+        
+
+#Now lets test it.
+#TO make it dynamic lets ask the email address from user using input()
+    
+email = input()
+valid = check_valid(email)
+
+#This will return True if the email id is valie else return False.

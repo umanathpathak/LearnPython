@@ -1,0 +1,137 @@
+Task1:
+Create a regular expression for checking valid email id.
+
+import re
+
+email_id = " ankitagrawal579@gmail.com"
+pattern = "^[a-zA-Z][a-zA-Z0-9._-]{5,}@[a-zA-Z0-9]{3,}.[a-zA-Z]{2,3}$"   #'^' at the start of RE is to specify the start of the string, '$' is to specify the end of the string.
+
+s = re.match(pattern,email_id)
+try:
+    if s : print("valid email id")
+    else: print("invalid email id")
+except:
+    print("invalid email id")
+
+
+
+Task2:
+Create a regex to check for valid phone number.
+
+mob = "9988899000"
+pattern = "^[6-9][\d]{9}$"
+
+s = re.search(pattern,mob)              #instead of using match, I am using search, just another way of checking it, Search is much flexible.
+
+try:
+    if s : print("valid mobile number")
+    else: print("invalid mobile number")
+except:
+    print("invalid mobile number")
+    
+    
+    
+Task3:
+Create a regex to check for valid vehicle number. Example of valid vehicle number is: XX-99-X-9999
+
+veh = "XX-99-X-9999"
+pattern = r"[\w]{2}[-][\d]{2}[-][\w][-][\d]{4}"
+pattern = r"\w\w-\d\d-\w-\d\d\d\d$"
+
+s = re.match(pattern,veh)
+try:
+    if s : print("valid vehicle number")
+    else: print("invalid vehicle number")
+except:
+    print("invalid vehicle number")
+
+
+Task4:
+Create a regular expression to check for two times 'Ram' in the given string. 
+If the string doesn't contain two times 'Ram', it is invalid string.
+
+For example, 
+"Ram Mandir is the next stop after Goregaon. Jai Shree Ram."    - this is valid string. Because it contains two time Ram.
+"Superme Court is to decide on Ram Mandir verdict."             - this is invalid. as it contains only one time Ram.
+"Ramamyan is written on Shree Ram".                             - again a avlid string, as Ram appears twice.
+
+st = "Ramamyan is written on Shree Ram"
+pattern = "Ram"
+
+s = re.findall(pattern,st)
+
+try:
+    if len(s) >= 2 : print("valid string")
+    else: print("invalid string")
+except:
+    print("invalid string")
+
+
+Task5:
+Check for the given string has "numeric digit always followed by character" pattern. Space is not allowed after numeric digit. Only a character.
+For example, 
+"I want to say 1thing to you."  - is valid string. 1 is followed by 't'.
+"I want to say 1 thing to you."  - is invalid string, 1 is followed by space, not a character.
+
+st = "I want to say 1thing to you."
+pattern = r"[a-zA-Z ]*[[\d][a-zA-Z]+]*[a-zA-Z ]*"   #any character or space + (digit followed by any number of character) * repeat + any character or space
+
+s = re.match(pattern,st)      
+
+try:
+    if s : print("valid string")
+    else: print("invalid string")
+except:
+    print("invalid string")
+
+
+Task6:
+Extend the above regex to check for such pattern:    X9W4B7H8
+Character Numeric Character Numeric..........
+It will always start with a character (A-Z)
+
+Hint: you need to use '[[' and '\w' and '\d' in your pattern. Also check for start() and end().
+
+st = "X9W4B7H8"
+pattern = r"^[[a-zA-Z][0-9]]*$"   
+
+s = re.match(pattern,st)      
+
+try:
+    if s : print("valid string")
+    else: print("invalid string")
+except:
+    print("invalid string")
+
+
+Task7:
+Write a regex to validate a new username. Criteria for a valid username is as follows:
+It should start with an English alphabet followed by alphanumeric characters.
+No special characters allowed
+Username length should be at least 3 and should not exceed 20.
+
+st = "RAjesh1234asfsd^afsf"
+pattern = r"[a-zA-z][a-zA-Z0-9]{2,19}$"   
+
+s = re.match(pattern,st)      
+
+try:
+    if s : print("valid username")
+    else: print("invalid username")
+except:
+    print("invalid username")
+
+
+'''
+Task8:
+Split given text based on given pattern: '#@#'
+
+"I love python#@#regular#@#expression"
+should return ["I love python","regular","expression"]
+'''
+
+st = "I love python#@#regular#@#expression"
+pattern = '#@#'
+
+l = re.split(pattern,st)
+l

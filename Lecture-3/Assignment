@@ -1,0 +1,94 @@
+##Task-1
+#Explore rstrip, lstrip, rjust, ljust and center functions of String data type.
+
+
+
+##Task-2: Create a calculator
+#1) Print welcome message. Read num1, num2 and operator from the user.
+
+#2) If given values are not acceptable then print the error message.
+# num1 and num2 should be integer or float only. operator should be one of ('+','-','*','/','**','%')
+# ** is for power, % is for modulus. 
+
+#3) Based on the operator, perform arithmatic operation on num1 and num2.
+# for example, if operator is '*', then do the multiplication of num1 and num2. 
+
+#4) For division, print the answer of 2 decimal precision.
+# for example, num1=1 and num2=3, then num1/num2 = 0.333333333, then print output as '0.33' only.
+
+#5) Print your output in the below format: 
+#num1 operator num2 = answer
+#for num1=4, num2=6, operator=+, then output should be '4 + 6 = 10'
+#for num1=4, num2=6, operator=/, then output should be '4 / 6 = 0.67'
+
+
+
+##Task-3
+#Design a new door mat with the following specifications:
+
+Mat size must be NxM. (N is an odd natural number, and M is 3 times N.)
+The design should have 'WELCOME' written in the center.
+The design pattern should only use |, . and - characters.
+
+Sample Designs
+
+    Size: 7 x 21 
+    ---------.|.---------
+    ------.|..|..|.------
+    ---.|..|..|..|..|.---
+    -------WELCOME-------
+    ---.|..|..|..|..|.---
+    ------.|..|..|.------
+    ---------.|.---------
+    
+    Size: 11 x 33
+    ---------------.|.---------------
+    ------------.|..|..|.------------
+    ---------.|..|..|..|..|.---------
+    ------.|..|..|..|..|..|..|.------
+    ---.|..|..|..|..|..|..|..|..|.---
+    -------------WELCOME-------------
+    ---.|..|..|..|..|..|..|..|..|.---
+    ------.|..|..|..|..|..|..|.------
+    ---------.|..|..|..|..|.---------
+    ------------.|..|..|.------------
+    ---------------.|.---------------
+    
+    
+Input Format
+
+A single line containing the space separated values of N and M.
+
+Constraints
+5 < N < 101
+15 < M <  303
+
+Output Format
+
+Output the design pattern.
+
+
+Sample Input
+
+9 27
+
+
+Sample Output
+
+------------.|.------------
+---------.|..|..|.---------
+------.|..|..|..|..|.------
+---.|..|..|..|..|..|..|.---
+----------WELCOME----------
+---.|..|..|..|..|..|..|.---
+------.|..|..|..|..|.------
+---------.|..|..|.---------
+------------.|.------------
+
+Hint: 
+'*' operator with string repeats the string.
+'.|.' is the pattern which repeats. Use center function to pad the string with '-'. [also go though the functions rjust/ljust]
+use for loop to print the number of rows as per input values.
+
+
+Please feel free to contact me for any query.

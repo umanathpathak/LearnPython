@@ -1,0 +1,127 @@
+#create a simple function to return the first letter of string in lower case.
+def first_letter(str1):
+    return str1[0].lower()
+    
+#Change the above function into Lambda expression 
+f = lambda str1 : str1[0].lower().lower()
+
+#Lets test it
+first_letter('Asfsd')
+f('Assfsd')
+ 
+#create another lambda expression to join first letters of two strings
+f = lambda str1,str2 : str1[0].lower()+str2[0].upper()
+f('Assfsd','wqrer')
+
+
+#lambda expresssion example
+g = lambda str1:(str1[0].lower() if str1[1] == 'A' else str1[0].upper())
+g('asddf')
+g('dAasd')
+
+g = lambda str1:(str1[0].lower() if str1[1] == 'A' else None)
+
+g('asddf')
+g('dAasd')
+
+
+#create a function
+def odd_even(num):
+    if num%2==1:
+        return num%5
+    else:
+        return num%7
+        
+odd_even(496)
+
+#Convert above function into lambda function
+odd_even = lambda num:num%5 if num%2==1 else num%7
+
+#by default, lambda function returns a list
+#Let's test above lambda function on some range
+for i in range(11,20):
+    print(odd_even(i))
+
+#map function, applies the function (1st argument) on the range passed(2nd argument)
+mapper = map(odd_even,range(11,20))
+
+#Directly passing lambda function in map function
+mapper = map(lambda num:num%5 if num%2==1 else num%7,range(11,20))
+
+#map function returns a generator in python 3.x, in 2.x it returns a list.
+for i in mapper:
+    print(next(mapper))
+
+#lambda function to return true if num is divisible by 3
+mod3 = lambda x:True if x%3==0 else False
+
+#filter function, outputs only those values from range for which 
+#the function (1st argument) return True
+
+#below filter function returns only those num which are purely divisible by 3
+filter(mod3, range(30,40))
+filter(lambda x:True if x%3==0 else False, range(30,40))
+
+#now instead of using range, lets pass mapper list created by map function
+filter(mod3,mapper)
+
+#lets remove all the intermediate variables and pass the actual lambda functions
+filter(lambda x:True if x%3==0 else False,  \
+       map(lambda num:num%5 if num%2==1 else num%7,range(11,20)))
+                    
+#reduce function, applies the function (1st argument) o the whole range, 
+#and returns only one value as output
+
+#reduce is not an in-built function, so have to write below import statement                
+from functools import reduce
+reduce(lambda x,y:x+y,range(1,10))
+
+#reduce can also be applied on strings, add space between all the letters of a word
+reduce(lambda x,y:x+' '+y,'safd')
+
+
+
+#arguments and key arguments:
+
+# *args (single *) is for position arguments and takes any num of positional arguments.
+#no positional argument can follow *args.
+#only keyword arguments can follow *args.
+def myprint(a,b,c,*arg):
+    print(arg)
+
+myprint('sfasd','2343',7868,'asfsdfasdf','asdfasd')
+
+#1st three arguments are mapped to a,b,c and all other positional arguments are read by *arg
+#when you print arg, it is a tuple.
+
+def myprint(a,b,c,d=9,*rum):
+    print(rum)
+
+myprint('sfasd','2343',7868,'asfsdfasdf','asdfasd')
+
+#positional arguments are mapped based on positions. 
+#If no positional arguments specified then you can treat it as keyword arguments. 
+
+#below function takes 3 arguments, a,b,c. 
+#it seems a is positional and b & c are keyword arguments. But that is not true.
+
+def abc(a,b=5,c=7):
+    print(a,b,c)
+
+
+abc(7,6)    #7 is mapped to a and 6 is mapped to b.
+abc(b=6,a=5) #a takes 5, b takes 6 (overrrides 5), c takes default value 7.
+abc(c=9,a=3) #a takes 3, b takes default 5, c takes 9 (overrides 7).
+abc(b=8,c=6) #ERROR!! No value is passes to a.
+
+
+#**keyargs is for passing multiple keyword arguments to a function.
+#No positional or keyword argument can follow **keyarg.
+#Everything else should be written before **keyarg.
+def mysum(**keyargs):
+    keyargs['c']=9
+    print(keyargs)
+
+mysum(a=2,b=9,c=7,d=5,e=6,r=4)
+
+#keyargs returns a dictionary.

@@ -1,0 +1,85 @@
+
+Task1: 
+Create a list 'stud_list' containing [studentname, roll_num, class, maths_marks, physics_marks, science_marks]
+
+stud_list = ['Ankit', 123, 10, 78, 98, 85]
+
+Task2: 
+Add english_marks to the above list using list function.
+
+stud_list.append(80)
+
+Task3: 
+Print only student marks in list format. Hint: list slicing
+
+stud_list[3:]
+or 
+stud_list[3:7]
+
+Task4: 
+There is some correction in the maths_marks, one equation was wrong, so 4 marks are given to students. 
+So change the maths_marks and add 4 to it. and print the updated list.
+
+stud_list[3] = stud_list[3] + 4
+stud_list
+
+
+Task5: 
+Create 2 new lists containing information about 5 students.
+One list for student names - ['stud1', 'stud2' ......, 'stud5']
+One for roll_num - [101, 103,....,106]
+
+stud_names = ['stud1', 'stud2', 'stud3', 'stud4', 'stud5']
+stud_roll_num = [101, 103, 105, 106, 108]
+
+Task6:
+Create a dictionary 'stud_info' from lists created above.
+Hint: zip() and dict()
+
+stud_info = dict(zip(stud_names, stud_roll_num))
+
+Task7:
+Print the (stud_name,roll_num) tuples from the stud_info dictionary.
+
+for n,r in stud_info.items():
+    print(n,r)
+
+Task8:
+Create two sets 'set1' and 'set2', 
+set1 being the '5' names of areas of Mumbai.
+{'andheri','kurla',.....'bandra'}
+
+set2 being the '5' name of areas of navi Mumbai.
+{'nerul','vashi',.....'airoli'}
+
+set1 = {'andheri','kurla','varsova','dadar', 'churchgate','bandra'}
+set2 = {'nerul','vashi','ghansoli', 'sanpada','airoli'}
+
+
+Task9:
+Make a union of set1 and set2, and make Mumbai as a whole city.
+
+Mumbai = set1.union(set2)
+print(Mumbai)
+
+Task10:
+Convert the whole Mumbai city set to list and tuples.
+Hint: list() and tuple()
+
+Mumbai_list = list(Mumbai)
+Mumbai_tuple = tuple(Mumbai)
+
+Task11:
+Create a list of square of index position. List should have 100 numbers. Use list comprehension.
+Hint: lst = [i for i in range(100)]
+Output should look like [0,1,4,9,16....,9801]
+
+lst_square = [i**2 for i in range(100)]
+
+
+Task12:
+Create a dictionary same as above requirement, the key should be index now. {index:square of index}
+Output should look like this:
+{0:0, 1:1, 2:4, 3:9,.....,99:9801}
+
+dict_square = {i:i**2 for i in range(100)}

@@ -1,0 +1,75 @@
+
+
+#reading from HTML files
+html = pd.read_html('https://www.w3schools.com/html/html_tables.asp')
+len(html)
+
+html[0]
+
+#reading from csv file
+ep = pd.read_csv(r'C:\Users\ankit\Desktop\pandas\Ecommerce Purchases.csv')
+ep.head()               #returns the head of the dataframe top 5 rows
+ep.columns              #returns the columns
+
+ep['Company'].value_counts()        #returns the frequency distribution of Company Column
+type(ep['Company'].value_counts())  #type of freq distribution, it is a series
+ep['AM or PM'].value_counts()       #frequency distribution of AM or PM column
+
+ep['CC Provider'].unique()          #returns unique CC providers
+len(ep['CC Provider'].unique())     #Total number of unique CC providers
+ep['CC Provider'].nunique()         #another way to get Total number of unique CC providers
+
+dir(ep['CC Provider'])              #How many methods are available with ep?
+
+help(ep['CC Provider'].unique)      #will return details about the unique method
+help(ep['CC Provider'].unique())    #First executes the unique method and so returns the info about array not unique method
+
+ep['CC Provider'].value_counts().head(5)      #Top 5 CC proivders
+
+cp= ep['CC Provider'].value_counts()          #Freq Distribution of CC Provider
+min_customer_cp = cp[cp < 800]                #CC Provider with less than 800 rows
+
+list_cc_porvider = list(min_customer_cp.index)  #list of those CC providers with less than 800 rows
+
+
+#Get rows for above CC providers
+final_list = ep[ep['CC Provider']==list_cc_porvider[0]]   
+
+for i in list_cc_porvider[1:]:
+    final_list = pd.concat([final_list,ep[ep['CC Provider']==i]])
+        
+final_list.info()
+final_list.head()
+
+#writing the less than 800 rows CC providers to output csv file:
+final_list.to_csv(r'C:\Users\ankit\Desktop\pandas\final_list.csv',index= False)
+
+
+#Charting the data
+ep['Purchase Price'].plot.bar()
+ep['CC Security Code'].plot.area()
+
+
+#Group by operations
+ep.groupby('CC Provider')['Purchase Price'].mean()      #returns the average of Purchase Price at Group level
+
+CC Provider
+American Express               50.489423
+Diners Club / Carte Blanche    48.733233
+Discover                       51.662338
+JCB 15 digit                   51.125115
+JCB 16 digit                   49.299143
+Maestro                        50.379173
+Mastercard                     50.043015
+VISA 13 digit                  51.449858
+VISA 16 digit                  49.871055
+Voyager                        51.973185
+
+
+ep['Purchase Price'].mean()                             #returns the average of Purchase Price at overall level
+overall                        50.34730200000025
+
+
+final_list['Purchase Price'].mean()                     #avg purchase price for the <800 rows CC providers
+final_list['CC Provider'].value_counts()
+

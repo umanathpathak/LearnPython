@@ -1,0 +1,74 @@
+import numpy as np
+
+l = [4,7,8,94,5,6,7]
+
+l_array = np.array(l)     #converts list to array
+print(l_array)
+
+l_array + 10    #Adds 10 to each element of the array
+l_array - 10
+l_array * 10
+l_array / 10
+
+l2= [2,7,4,8,9,5,7]
+l2_array = np.array(l2)   #converts list to array
+
+#member by member operation / must have same size of arrays
+l_array + l2_array
+l_array - l2_array
+l_array * l2_array
+l_array / l2_array
+
+
+r = np.arange(2,10,3)     #works same as range, but return an array instead of range object
+r
+
+np.random.randint(1,6,5)  #generates 5 random integers between 1 and 6 inclusive
+np.random.random(6)       #generates 6 random numbers between 0 and 1
+
+np.linspace(1,10,101)     #divides 1 and 10 into 101 euqal parts
+
+np.min(l2_array)          #return minimum from l2_array
+np.argmin(l2_array)       #return the index of the minimum from l2_array
+
+np.max(l2_array)          #return maximum from l2_arra
+np.argmax(l2_array)       #return the index of the maximum from l2_array
+
+l = [[5,8,9],[3,6,8],[4,4,2]]
+l_array = np.array(l)     #creates a 2-D array (3x3)
+
+l_array.size              #returns the size of the array
+l_array.shape             #returns the shape of the array
+l_array                   #print the array
+
+l1 = [5,8,9,3,6,8,4,4,2,4,6,7,8,9,5]
+l1_array = np.array(l1)
+l1_array.shape
+l1_array
+
+l1_array = l1_array.reshape((5,3))   #changes the shape of the array / the new shape size must match the orional size otherwise error
+l1_array.shape            #after storing the reshaped array back to origional, it will show the updated shape
+
+l1_array                
+l1_array[1:4,0:2]       #extracts particular portion of the array, unlike the list slicing where you can only get a member of list.
+l1_array[0:3,1:2]
+
+
+np.zeros((5,5))   #creates a 5x5 metric with all zeros
+np.ones((4,5))    #creates a 4x5 metric with all ones
+np.eye(5)         #identity metric of size 5x5, diagonal is 1, rest are 0.
+
+np.exp(0)
+np.log(1)
+l1_array = np.append(l1_array,9)  #appends to the array
+l1_array.shape
+
+
+p = [9,5,0,3,7]
+q = [1,2,0,4,5]
+f = np.array(p)
+g = np.array(q)
+
+g/f
+
+#divide  by 0 return 'inf' instead of raising error. Note: 0/0 is 'nan' (a special case).

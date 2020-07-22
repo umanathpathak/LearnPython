@@ -1,0 +1,55 @@
+Task1:
+Import pandas and read in the Ecommerce Purchases csv file and set it to a DataFrame called ecom.
+
+Task2:
+Check the head of the DataFrame.
+
+
+Task3:
+How many rows and columns are there? 
+
+Task4:
+What is the average Purchase Price?
+
+
+Task5:
+What were the highest and lowest purchase prices? 
+
+
+Task6:
+How many people have English 'en' as their Language of choice on the website? 
+
+Task7:
+How many people have the job title of "Lawyer" ? 
+
+Task8:
+How many people made the purchase during the AM and how many people made the purchase during PM ? 
+(Hint: Check out value_counts() ) 
+
+Task9:
+What are the 5 most common Job Titles?
+
+Task10:
+Someone made a purchase that came from Lot: "90 WT" , what was the Purchase Price for this transaction? 
+
+Task11:
+What is the email of the person with the following Credit Card Number: 4926535242672853
+
+Task12:
+How many people have American Express as their Credit Card Provider and made a purchase above $95 ?
+
+
+Task13:
+How many people have a credit card that expires in 2025? 
+
+Task14:
+What are the top 5 most popular email providers/hosts (e.g. gmail.com, yahoo.com, etc...) 
+
+
+Answer should look something like this:
+hotmail.com     1638
+yahoo.com       1616
+gmail.com       1605
+smith.com         42
+williams.com      37
+Name: Email, dtype: int64

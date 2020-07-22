@@ -1,0 +1,48 @@
+Task1:
+Create a regular expression for checking valid email id.
+
+Task2:
+Create a regex to check for valid phone number.
+
+Task3:
+Create a regex to check for valid vehicle number. Example of valid vehicle number is: XX-99-X-9999
+
+Task4:
+Create a regular expression to check for two times 'Ram' in the given string. 
+If the string doesn't contain two times 'Ram', it is invalid string.
+
+For example, 
+"Ram Mandir is the next stop after Goregaon. Jai Shree Ram."    - this is valid string. Because it contains two time Ram.
+"Superme Court is to decide on Ram Mandir verdict."             - this is invalid. as it contains only one time Ram.
+"Ramamyan is written on Shree Ram".                             - again a avlid string, as Ram appears twice.
+
+
+Task5:
+Check for the given string has "numeric digit always followed by character" pattern. Space is not allowed after numeric digit. Only a character.
+For example, 
+"I want to say 1thing to you."  - is valid string. 1 is followed by 't'.
+"I want to say 1 thing to you."  - is invalid string, 1 is followed by space, not a character.
+
+
+Task6:
+Extend the above regex to check for such pattern:    X9W4B7H8
+Character Numeric Character Numeric..........
+It will always start with a character (A-Z)
+
+Hint: you need to use '[[' and '\w' and '\d' in your pattern. Also check for start() and end().
+
+
+Task7:
+Write a regex to validate a new username. Criteria for a valid username is as follows:
+It should start with an English alphabet followed by alphanumeric characters.
+No special characters allowed
+Username length should be at least 3 and should not exceed 20.
+
+
+Task8:
+Split given text based on given pattern: '#@#'
+
+"I love python#@#regular#@#expression"
+should return ["I love python","regular","expression"]
+
+

@@ -1,0 +1,21 @@
+Task1:
+#Create a calculator.
+#For any unknown exceptions, handle them with try-except-finally block and print approriate message. 
+#use the same code created in Lecture-3 Assignment.
+
+
+Task2:
+#Ask a name from the user.
+#If user enters a name starting with 'A' or 'a' then raise an exception of TypeError, 
+#and print a message that 'I dont except names starts with A or a'.
+
+
+Task3:
+Ask a number from the user. If that number is same as today's date then raise a user defined exception 'SameDateError' and print a message
+'You are Lucky winner. The number you entered is today's date.'
+
+
+Task4:
+Read a number from the user. Add 10 to that number. It is possible that user may have entered a string. 
+Raise an exception if it is string.
+Whether it is number or string, print the number/string user has entered at the end of the error message.

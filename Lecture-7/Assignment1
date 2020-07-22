@@ -1,0 +1,43 @@
+
+Task1:
+#Create a module having one function 'add2nums' for adding two values.
+#Create another module importing the above module in it and call the 'add2nums' function passing two numbers entered by the user.
+
+
+
+Task2:
+#Create a module having a list as below:
+l = [10,21,40,35,22,60,52]
+
+#Create another module which imports the above module and change the value of the 2nd member (40) to 80 and print the updated list.
+
+
+
+Task3:
+#Create a module 'home.py'. If this module is called directly then print a message 'This is my home. I can do whatever.'
+If this module is imported then print a message 'I am imported from some module, so I can't do eveything.'
+
+
+
+
+Task4:
+#Create a package 'module_arithmatic' having 4 modules:
+#module_sum : having one function for addition of two nums
+#module_sub: having function for subtraction of two nums
+#module_mul: having function for multiplication of two nums
+#module_div: having function for division of two nums
+
+#Import these 4 modules from the above package. and do the arithmatic oprations.
+
+
+
+Task5:
+#Create a package 'parent_pkg'.
+#Create a subpackage within 'parent_pkg' as'child_pkg'
+#create another subpackahe within 'child_pkg' as 'grandchild_pkg'
+#Create a module within 'grandchild_pkg' having one print message that 'I am grand child.'
+
+#Import the module in the grandchild_pkg' and print the message.
+
+
+

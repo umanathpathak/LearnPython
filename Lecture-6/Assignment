@@ -1,0 +1,43 @@
+Task1:
+#Create a function to swap the case of the string. If it upper case then convert it to lower case and vice versa.
+
+
+Task2:
+Convert the above function to lambda function.
+
+
+Task3:
+Create a lambda function to reverse a string.
+
+
+Task4:
+use the above crete created lambda function and apply it to below list:
+['Aasopalav', 'TejeT' 'Coconut', 'PopoP' 'Pipal', 'Apple', 'Juice', 'AmomA']
+
+
+Task5:
+Use filter and map functions to output only those members from the above list which are palindrome. (reverse is same as origional string)
+
+
+
+Task6:
+Use reduce function to add the above output and make a single string.
+Output should be: 'TejeT PopoP AmomA'
+
+
+Task7:
+Use reduce function to get the multiplication of the below list:
+l = [4,7,2,9,4,5,3,5]
+
+
+Task8:
+Create a function 'sumall' to accept any number of integer values and return the sum of them.
+
+
+Task9:
+Create a function 'numvsstring' to accept any number or string as arguments and return two different lists, one with numbers and one with strings.
+
+
+Task10:
+Create a function 'hotornot' to accept any number of actress names with value 'hot' and 'nothot' as value.
+Return only those actress names which have value as hot.

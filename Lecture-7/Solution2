@@ -1,0 +1,93 @@
+
+Task1:
+#Create a calculator.
+#For any unknown exceptions, handle them with try-except-finally block and print approriate message. 
+#use the same code created in Lecture-3 Assignment.
+
+import sys
+print("Welcome to my Calculator - Created by Ankit")
+num1 = input("Enter Num1 (only numeric [0-9]):\n")
+try:
+    
+    if not num1.replace('.','').isnumeric() :
+        print("I accept only numeric values [0-9] for Num1. Please try again. ")
+        sys.exit("I accept only numeric values [0-9] for Num1. Please try again. ")
+        
+    num2 = input("Enter Num2 (only numeric [0-9]):\n")
+    if not num2.replace('.','').isdigit() :
+        print("I accept only numeric values [0-9] for Num2. Please try again. ")
+        sys.exit("I accept only numeric values [0-9] for Num2. Please try again. ")
+    
+    oper = input("Enter Operator (only ['+','-','*','/','**','%']):\n")
+    if oper not in ('+','-','*','/','**','%'):
+        print("I accept only ['+','-','*','/','**','%'] for Operator. Please try again. ")
+        sys.exit("I accept only ['+','-','*','/','**','%'] for Operator. Please try again. ")
+        
+    if oper == '+':
+        ans = float(num1) + float(num2)
+    elif oper == '-':
+        ans = float(num1) - float(num2)
+    elif oper == '*':
+        ans = float(num1) * float(num2)
+    elif oper == '/':
+        ans = float(num1) / float(num2)
+    elif oper == '**':
+        ans = float(num1) ** float(num2)
+    elif oper == '%':
+        ans = float(num1) % float(num2)
+    
+    if num1.isdigit() and num2.isdigit():
+        print((num1 + " " + oper + " " + num2 + " = " + "{:.0f}").format(ans))
+    else:
+        print((num1 + " " + oper + " " + num2 + " = " + "{:.2f}").format(ans))
+except:
+    print("Something has gone wrong. Please try again.")
+finally:
+    print("Thanks for using this calculator. Have a nice day.")
+    
+    
+    
+    
+Task2:
+#Ask a name from the user.
+#If user enters a name starting with 'A' or 'a' then raise an exception of TypeError, 
+#and print a message that 'I dont except names starts with A or a'.
+name = input("Please enter your name: ")
+try:
+    if name[0].lower() == 'a' :
+        raise TypeError
+except TypeError:
+    print("I dont except names starts with A or a")
+    
+
+Task3:
+Ask a number from the user. If that number is same as today's date then raise a user defined exception 'SameDateError' and print a message
+'You are Lucky winner. The number you entered is today's date.'
+
+
+class SameDateError(Exception):
+    pass
+
+import datetime
+try:
+    num = int(input("Please enter a number: "))
+    if num == datetime.datetime.now().day:
+        raise SameDateError
+except SameDateError:
+    print("You are Lucky winner. The number you entered is today's date.")
+except:
+    print("Something went wrong. Please try after some time.")
+    
+
+Task4:
+Read a number from the user. Add 10 to that number. It is possible that user may have entered a string. 
+Raise an exception if it is string.
+Whether it is number or string, print the number/string user has entered at the end of the error message.
+
+try:
+    num = input("Please enter a number: ")
+    num1 = int(num) + 10
+except ValueError:
+    print("Number expected, Please try again")
+finally:
+    print(num)

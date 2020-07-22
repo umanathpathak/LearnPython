@@ -1,0 +1,83 @@
+
+import numpy as np
+import pandas as pd
+
+np.random.seed(10)
+data = np.random.randint(5,100,40).reshape(10,4)    #create a 10x4 array with random numbers
+data
+
+l = ['English','Hindi','Science','Maths']           #subject list
+
+df = pd.DataFrame(data=data,columns=l)              #Createa a DataFrame using the above data and subjects
+
+   English  Hindi  Science  Maths
+0       14     20       69     33
+1       94     98       34     13
+2       78      5       45     41
+3       21     16       59     93
+4       67     38       77     83
+5       54     56       59     82
+6       74     18       30     18
+7       97     91       35     35
+8       94     17       70     36
+9       62     41       32     23
+
+
+
+df[['English','Maths']]           #returns the marks of English and Maths for all students
+
+df.iloc[0:5]['English']            #retunrns the marks of English and Maths for top 5 students
+df.iloc[6:8][['English','Maths']]  #returns the marks of English and Maths for 6th and 7th student 
+df.loc[4,'Science']                #returns the 4th student's Science marks
+
+df.head(7)                    #checking the head of dataframe
+df.tail(4)                    #checking the tail of dataframe
+df.info()                     #checking the info of dataframe
+
+
+df['Total'] = df['English'] + df['Hindi'] + df['Science'] + df['Maths']    #creates a new column (derived column)
+df['Marathi'] = pd.Series(np.random.randint(30,100,10))               #creates another column
+
+df.drop('Marathi',axis=1,inplace=True)                #deleting the column
+df.drop(3)                                            #deleting the row at index 3
+
+#Slections and Filters
+df[df['English']>65]                                  #only those rows where English marks are greater than 65
+
+df[(df['Maths'] > 40) | (df['Hindi'] < 80)]           #only those rows where Maths marks is greate than 40 OR Hindi marks less than 80
+
+
+#Working with Index
+df.reset_index(inplace=True)            #storing the index as part of data
+df.set_index('Total')                   #setting column as index
+
+df.drop('index',inplace=True, axis=1)   #dropping the column
+
+
+
+#Multi level Index
+
+outside = ['G1','G1','G1','G2','G2','G2']
+inside = [1,2,3,1,2,3]
+hier_index = list(zip(outside,inside))
+hier_index = pd.MultiIndex.from_tuples(hier_index)
+
+df = pd.DataFrame(np.random.randn(6,2),index=hier_index,columns=['A','B'])
+
+             A         B
+G1 1  0.678931 -1.913554
+   2 -0.942458 -1.745543
+   3 -1.020945 -0.162069
+G2 1 -0.657971  0.422113
+   2  0.624023  0.501640
+   3  0.841435 -1.640250
+      
+df.index
+
+
+
+#COncatenating dataframes
+pd.concat([df,df])            #Vertically appends two dataframes
+pd.concat([df,df],axis=1)     #Horizontally appends tow data frames
+
+

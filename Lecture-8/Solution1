@@ -1,0 +1,214 @@
+
+General Task: For each Task create an object of class and print all attributes and call all the methods of a class.
+Also for each class create a constructor and pass logical arguments which you think required and store them in object attributes..
+
+
+Task1:
+Write a Python class 'MyClass' which has two methods get_String() and print_String(). 
+get_String accept a string from the user and print_String print the string in upper case.
+
+class MyClass():
+     
+    def get_String(self,msg):
+        self.msg = msg
+                
+    def print_String(self):
+        print(self.msg.upper())
+
+
+mc1 = MyClass()
+mc1.get_String("Hello")
+mc1.print_String()
+
+
+Task2:
+Write a Python class named 'Rectangle' constructed by a length and width of a rectangle.
+Call method print_area() to print the area.
+
+class Rectangle():
+    
+    def __init__(self,length,width):
+        self.length = length
+        self.width = width
+        
+    def print_area(self):
+        area = self.length * self.width
+        print("Area of Rectangle is", area)
+        
+rec = Rectangle(5,6)
+rec.print_area()
+
+
+Task3:
+Write a class 'Animal' having (age,gender) as attributes and isMammal() method which prints "I am Mammal animal".
+
+class Animal():
+    def __init__(self,age,gender):
+        self.age = age
+        self.gender = gender
+    
+    def isMammal(self):
+        print("I am Mammal Animal")
+
+a = Animal(4,"Male")
+a.age
+a.gender
+a.isMammal()
+
+Task4:
+Create three classes Duck,Fish and Zebra. These 3 classes inherit Animal class (Task3 class).
+Duck has (beakColor,swim(),quack())
+Fish has (sizeInFt,canEat,swim())
+Zebra has (is_wild,run()).
+Note: Here attribute are without paranthesis and with paranthesis are methods of a class.
+
+Create object of all 3 child classes and print all the methods.
+
+
+class Duck(Animal):
+    def __init__(self,age,gender,beakColor):
+        Animal.__init__(self,age,gender)
+        self.beakColor = beakColor
+        
+    def swim(self):
+        print("I can swim.")
+    
+    def quack(self):
+        print("I sound like quack.")
+
+class Fish(Animal):
+    def __init__(self,age,gender,sizeInFt,canEat):
+        Animal.__init__(self,age,gender)
+        self.sizeInFt = sizeInFt
+        self.canEat = canEat
+        
+    def swim(self):
+        print("Swiming is my life.")
+
+class Zebra(Animal):
+    def __init__(self,age,gender,is_wild):
+        Animal.__init__(self,age,gender)
+        self.is_wild = is_wild
+        
+    def run(self):
+        print("I can run.")
+    
+d = Duck(10,"Male","Red")
+d.isMammal()
+d.quack()
+d.swim()
+
+f = Fish(1,"Female",2,"Yes")
+f.isMammal()
+f.swim()
+
+z = Zebra(10,"Male","Yes")
+z.isMammal()
+z.run()
+
+
+
+Task5:
+Write a Python class named 'Circle' constructed by a radius and two methods which will compute the area and 
+the perimeter of a circle.
+
+class Circle():
+    def __init__(self,radius):
+        self.radius = radius
+    
+    def print_area(self):
+        area = (self.radius ** 2) * 3.14
+        print("Area of Circle is", area)
+    
+    def print_perimeter(self):
+        perimeter = (self.radius * 2) * 3.14
+        print("Perimeter of Circle is", perimeter)
+    
+c = Circle(5)
+c.print_area()
+c.print_perimeter()
+
+Task6:
+Create a class 'Shape' with below properties:
+Attributes:
+shape_type
+color
+filled
+
+methods:
+print_shape()  - should print shape_type
+print_area()  - should print message "I am asked for area of shape"
+
+
+class Shape():
+    def __init__(self,shape_type,color,filled):
+        self.shape_type = shape_type
+        self.color = color
+        self.filled = filled
+        
+    def print_shape(self):
+        print(self.shape_type)
+        
+    def print_area(self):
+        print("I am asked for area of shape.")
+
+s = Shape("Circle","Red","Yes")
+s.color        
+s.filled
+s.print_area()
+s.shape_type
+s.print_shape()
+
+Task7:
+Create two classes which inherit the above 'Shape' class:
+1)Circle  - radius, print_area()
+2)Rectangle - width, length, print_area()
+
+here in child class, it should calcualte area of respective shape. 
+it should first print the message of parent class print_area() method and then print the area of the shape in new line.
+
+Hint: This exercise is for method overriding purpose.
+
+
+class Circle(Shape):
+    def __init__(self,radius,color="None",filled="No"):
+        Shape.__init__(self,"Circle",color,filled)
+        self.radius = radius
+        
+    def print_area(self):
+        Shape.print_area(self)
+        area = (self.radius ** 2) * 3.14
+        print("Circle radius is {} and area of Circle is {}".format(self.radius,area))
+        
+class Rectangle(Shape):
+    def __init__(self,length,width,color="None",filled="No"):
+        Shape.__init__(self,"Rectangle",color,filled)
+        self.length = length
+        self.width = width
+        
+    def print_area(self):
+        Shape.print_area(self)
+        area = self.length * self.width
+        print("Rectangle length and width is {} , {} and area={}".format(self.length,self.width,area))
+        
+c = Circle(5)
+c.print_area()
+
+r = Rectangle(5,6)
+r.print_Area()
+
+Task8:
+Now create 2 Cirlce objects and 3 rectangle objects with different radius and width/length.
+Now pass all these 5 objects to some for loop and call print_shape() and print_area() methods on each object.
+
+
+c1 = Circle(6)
+c2 = Circle(7)
+
+r1 = Rectangle(8,9)
+r2 = Rectangle(9,10)
+r3 = Rectangle(10,11)
+
+for i in [c1,c2,r1,r2,r3]:
+    i.print_shape()
+    i.print_area()

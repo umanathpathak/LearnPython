@@ -1,0 +1,33 @@
+#The best place to start with Machine Learning is to start with Titanic Problem.
+
+#Use below link to get the dataset 'train.csv':
+#https://www.kaggle.com/c/titanic/data
+
+#Your task is to understand data using different methods of python.
+#Also use kernal tab on the above URL to understand how other people are exploring data.
+
+#Some data Exploratory code is as below:
+
+import pandas as pd
+
+data = pd.read_csv(r'C:\Users\ankit\Downloads\titanic_train.csv')
+
+data.index
+data.columns
+
+total = data.groupby('Pclass')['Survived'].count()
+total
+
+survived = data.groupby('Pclass')['Survived'].sum()
+
+df = pd.DataFrame(data=total)
+df.columns = ['total']
+df['survived'] = survived
+df['died'] = df['total'] - df['survived']
+df
+
+df['P%survived'] = df['survived']*100/df['total']
+df
+
+
+data.plot(kind='bar', stacked=True)

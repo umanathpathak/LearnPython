@@ -1,0 +1,87 @@
+#Refer sports_schema.jpg file for the diagram.
+
+
+class Sports():
+    
+    def __init__(self,type_of_sport,name,no_of_player):
+        self.type_of_sport = type_of_sport
+        self.name = name
+        self.no_of_player = no_of_player 
+        
+    def sport_print(self):
+        print("I am playing " + self.name + " to stay fit.")
+        
+Sp1 = Sports('Indoor','Cricket',11)
+Sp1.sport_print()
+
+import random
+
+class Cricket(Sports):
+    def __init__(self,no_of_player,overs,score):        
+        self.overs = overs
+        self.score = score
+        Sports.__init__(self,'Outdoor','Cricket',no_of_player)
+        
+    def bat(self):
+        print("I am batting")
+        
+    def bowl(self):
+        print("I am bowling")
+        
+    def what_is_score(self):
+        print("The score is",self.score)
+        
+    def sport_print(self):
+        print("I am playing",self.name," also I do Yoga.")
+        
+    def local1(self):
+        print("Hello Ji")
+        
+class Ludo(Sports):
+    __list_of_colors = ['red','yellow','green','blue']
+    def __init__(self,no_of_player,color_selected):
+        self.color_selected = color_selected
+        Sports.__init__(self,'Indoor','Ludo',no_of_player)
+        
+    def turn_dice(self):
+        return random.randint(1,6)
+    
+    def print_list_of_colors(self):
+        print(self.__list_of_colors)
+        
+    def sport_print(self):
+        print("I don't play anything")
+    
+    def local1(self):
+        print("Bye Bye Ji")
+    
+obj1 = Cricket(10,50,300)
+obj2 = Ludo(1,"red")
+
+obj2.local1()
+
+methods = obj1.local1
+methods()
+methods = obj2.local1
+methods()
+
+for i in (obj1,obj2):
+    i.local1()
+    
+ld2 = Ludo(2,"blue")
+ld2.turn_dice()
+
+ld2.__list_of_colors = ['black','black','black','black']
+ld2.__list_of_colors
+
+ld3 = Ludo(2,"yellow")
+dir(ld2)
+
+cr1 = Cricket(10,50,300)
+cr1.sport_print()
+
+ld1 = Ludo(3,"blue")
+ld1.sport_print()
+
+Cricket.__base__
+Cricket.__bases__

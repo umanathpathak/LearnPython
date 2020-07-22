@@ -1,0 +1,61 @@
+Task1: 
+Create a list 'stud_list' containing [studentname, roll_num, class, maths_marks, physics_marks, science_marks]
+
+
+Task2: 
+Add english_marks to the above list using list function.
+
+
+Task3: 
+Print only student marks in list format. Hint: list slicing
+
+
+Task4: 
+There is some correction in the maths_marks, one equation was wrong, so 4 marks are given to students. 
+So change the maths_marks and add 4 to it. and print the updated list.
+
+
+Task5: 
+Create 2 new lists containing information about 5 students.
+One list for student names - ['stud1', 'stud2' ......, 'stud5']
+One for roll_num - [101, 103,....,106]
+
+
+Task6:
+Create a dictionary 'stud_info' from lists created above.
+Hint: zip() and dict()
+
+
+Task7:
+Print the (stud_name,roll_num) tuples from the stud_info dictionary.
+
+
+Task8:
+Create two sets 'set1' and 'set2', 
+set1 being the '5' names of areas of Mumbai.
+{'andheri','kurla',.....'bandra'}
+
+set2 being the '5' name of areas of navi Mumbai.
+{'nerul','vashi',.....'airoli'}
+
+
+Task9:
+Make a union of set1 and set2, and make Mumbai as a whole city.
+
+
+
+Task10:
+Convert the whole Mumbai city set to list and tuples.
+Hint: list() and tuple()
+
+
+Task11:
+Create a list of square of index position. List should have 100 numbers. Use list comprehension.
+Hint: lst = [i for i in range(100)]
+Output should look like [0,1,4,9,16....,9801]
+
+
+Task12:
+Create a dictionary same as above requirement, the key should be index now. {index:square of index}
+Output should look like this:
+{0:0, 1:1, 2:4, 3:9,.....,99:9801}
