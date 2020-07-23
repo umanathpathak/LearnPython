@@ -1,0 +1,14 @@
+1. Installation
+   Python Object and Data Structure Basics
+   Default functions with data types
+2. Python operators
+     Mathamatical operators
+	 Comparison operators
+3. Loops and Statements
+4. Methods and Functions
+5. OOPS concept
+6. Modules and Packages
+7. Errors and Exceptions Handling
+8. Numpy and Panda (Foundation for DataScience)
+9. Database(Mysql) with Python
+10.Flask Framework basics (Foundation for Web Developer)
