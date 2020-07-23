@@ -1,7 +1,7 @@
 1. Installation
    Python Object and Data Structure Basics
    Default functions with data types
-2. Python operators
+   Python operators
      Mathamatical operators
 	 Comparison operators
 3. Loops and Statements
