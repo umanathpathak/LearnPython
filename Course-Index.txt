@@ -2,13 +2,13 @@
    Python Object and Data Structure Basics
    Default functions with data types
    Python operators
-     Mathamatical operators
+     Mathematical operators
 	 Comparison operators
-3. Loops and Statements
-4. Methods and Functions
-5. OOPS concept
-6. Modules and Packages
-7. Errors and Exceptions Handling
-8. Numpy and Panda (Foundation for DataScience)
-9. Database(Mysql) with Python
-10.Flask Framework basics (Foundation for Web Developer)
+2. Loops and Statements
+3. Methods and Functions
+4. OOPS concept
+5. Modules and Packages
+6. Errors and Exceptions Handling
+7. Numpy and Panda (Foundation for DataScience)
+8. Database(Mysql) with Python
+9. Flask Framework basics (Foundation for Web Developer)

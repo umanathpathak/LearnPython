@@ -1,0 +1,25 @@
+#create below directory
+C:\APP\python
+
+#download python from below link
+https://www.python.org/ftp/python/3.6.0/python-3.6.0-amd64.exe
+
+1. Run above installer 
+2. Click "ADD python 3.6 to PATH"
+3. Click on "Customize Installation"
+4. Click on "Next"
+5. Give installation path as "C:\APP\python" and then click on "Install"
+6. Click on Close.
+
+#download VS Code.
+https://az764295.vo.msecnd.net/stable/17299e413d5590b14ab0340ea477cdd86ff13daf/VSCode-win32-x64-1.47.2.zip
+
+#Install python extention
+#set python interpretor.
+
+
+
+
+
+
+
