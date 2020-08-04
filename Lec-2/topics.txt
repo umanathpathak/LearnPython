@@ -1,0 +1,65 @@
+string format
+-------------
+find
+split
+lstrip
+rstrip
+strip
+statswith
+endswith
+upper
+lower
+slicing and indexing 
+\n
+\t
+\\
+string format
+
+mutable vs immutable
+---------------------
+change string charchter
+same do with list.
+
+
+list
+-----
+append
+insert
+extend
+remove
+count
+index
+pop
+sort
+reverse
+clear
+
+statement
+-----------
+if
+else
+elif
+continue
+break
+input
+and
+or
+in
+not in
+is
+not
+
+for loop
+--------
+for
+range
+zip
+
+while loop
+------------
+while
+input
+continue
+break
+
+

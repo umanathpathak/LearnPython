@@ -28,9 +28,7 @@ x1 += 9         #self addition, same as above expression
 
 #Functions with String 
 z = 'my 2nd python class, and it was too long.'
-
-z           #print the whole string
-
+print(z)           #print the whole string
 #slicing formula is z[start_pos:end_pos+1:stepsize]
 #index in python starts with 0.
 z[5:10]      #print subpart of the string, the end-pos is exlcuded!!, 10th position is exluded
@@ -74,5 +72,25 @@ if z.startswith('#'):
                 i = 1
                 j = 0
                 k = True
+'''
+#Strint backslash character
+\newline 	#Ignored (continuation line)
+\\ 		#Backslash (stores one \)
+\' 		#Single quote (stores ')
+\" 		#Double quote (stores ")
+\a 		#Bell
+\b 		#Backspace
+\f 		#Formfeed
+\n 		#Newline (linefeed)
+\r 		#Carriage return
 
-
+\t 		#Horizontal tab
+\v 		#Vertical tab
+\xhh 		#Character with hex value hh (exactly 2 digits)
+\ooo 		#Character with octal value ooo (up to 3 digits)
+\0 Null: 	#binary 0 character (doesn’t end string)
+\N{ id } 	#Unicode database ID
+\uhhhh 	#Unicode character with 16-bit hex value
+\Uhhhhhhhh 	#Unicode character with 32-bit hex value
+\other 	#Not an escape (keeps both \ and other
+'''

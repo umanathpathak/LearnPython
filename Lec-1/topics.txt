@@ -1,0 +1,23 @@
+introduction ppt
+datatypes
+string format
+-------------
+find
+split
+lstrip
+rstrip
+strip
+statswith
+endswith
+upper
+lower
+slicing and indexing 
+\n
+\t
+\\
+string format
+
+mutable vs immutable
+---------------------
+change string charchter
+same do with list.
