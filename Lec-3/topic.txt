@@ -1,0 +1,6 @@
+how to write function
+write function for add,sub,mul,div
+write function inside function
+error handling
+scope of variable
+how to write systamatic program - write function to calculate area for circle, rectangle, square

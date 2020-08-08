@@ -1,0 +1,74 @@
+#Function - start by "def" followed by function name and then followed by ()
+#function is object in python, function name is reference to the actual function.
+#You can pass the reference to some other variable and it will work like actual function.
+
+echo = print
+echo("nilesh")  #does same as print function
+
+#creating own function add2
+def add2(num1,num2):
+    return num1+num2
+
+a1=float(input("Enter first number : "))
+a2=float(input("Enter second number : "))
+print(add2(a1,a2))
+print(add2('a1','a2'))     #this works on strings too, doing this we achieve polymorphism.
+
+
+def mul(num1,num2):
+    return num1*num2
+m1=float(input("Enter first number : "))
+m2=float(input("Enter second number : "))
+print(mul(m1,m2))
+print(mul('m1',3))      #repeats the string
+
+#by changing the value in the function,doesn't change the value of the actual variable outside of the function.
+def add2(num1,num2):
+    num1 = 80
+    return num1+num2
+n1=12
+n2=23
+print(add2(n1,n2))  # num1 overwrite the value of n1
+print(n1)           # but outside the funtion n1 value still same 
+
+#but that is not true for lists. Because lists are mutable onjects, 
+#they are passed by reference and int are immutables so they are passed by value
+def add2(num1,num2,num3):
+    num3[0]=50
+    return num1+num2+num3[0]
+l1=[1,2,3]
+num1=10
+num2=20    
+print(add2(num1,num2,l1))
+print(l1[0])
+
+#but same thing won't work with tuple, cos tuple is immutable object
+def add2(num1,num2,l1):
+    num1 = 70
+    l1[0] = 50
+    return num1+num2
+
+t1=(1,2)
+n1=5    
+n2=7
+add2(n1,n2,t1)  # will get error as tuple is immutable object
+
+
+#generator and yield
+
+def gen():
+    for i in range(10):
+        yield i*3
+g = gen()
+next(g)
+next(g)
+next(g)
+
+def gen1():
+    for i in range(10):
+        return ' '.join([str(i*2) for i in range(10)])
+gen1()
+
+'''
+Note - gen1 acquiring memory space immediately when it defined, but yield only
+acquire space when variable value required also it acquire space only for one at a time.
