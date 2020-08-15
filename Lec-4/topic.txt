@@ -1,0 +1,9 @@
+lambda                      ld.py
+datetime                    dt.py
+re module                   reg.py
+file handling               flh.py
+os module                   flh.py
+__name__ variable           animal.py dog.py
+import another python file  animal.py dog.py
+class                       class1.py
+class with __init__         class2.py
