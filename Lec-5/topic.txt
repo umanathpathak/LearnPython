@@ -4,5 +4,6 @@ class with __init__         class2.py
 variable with security      class2.py
 __name__ variable           animal.py dog.py
 import another python file  animal.py dog.py
-abstration                  shape.py
+abstration and Inheritance  Shape.py Circle.py
 encapsulation               encapsulation.py
+polymorphism                typical add function or len function
