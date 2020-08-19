@@ -11,12 +11,14 @@ car:             -----> this is class of car, which is blueprint
     gear
 
 maruti:          ------> this is instance of class car which actually contain data
+    maruti's own attributes
     car:
         colour
         wheel
         gear
 
 suzuki:          ------> this is instance of class car which actually contain data
+    suzuki's own attributes
     car:
         colour
         wheel
@@ -36,17 +38,17 @@ Inheritance:
     A parent class can share its attributes with a child class.
 
 Polymorphism:
-    Poly means different, morphology study of shapes.
+    Poly means different, morphology means study of shapes.
     Polymorphism means existing in many forms.
     A cursor may take different forms like an arrow, a line, cross, or other shapes depending on the behavior of the user or the program mode.
     Same function but will behave differently on different input.
     i.e.
     def add2(num1,num2):
         return num1+num2
-    a1=float(input("Enter first number : "))
-    a2=float(input("Enter second number : "))
+    a1=input("Enter first number : ")
+    a2=input("Enter second number : ")
+    print(add2(int(a1),int(a2))
     print(add2(a1,a2))
-    print(add2('a1','a2'))
 
 Abstration:
     details of the programming codes are hidden away from the user, and only the essential things are displayed to the user.
