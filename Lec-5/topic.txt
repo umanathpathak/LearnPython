@@ -5,6 +5,6 @@ variable with security      class2.py
 python module               module 
 __name__ variable           checkname
 abstration and Inheritance  abs
-encapsulation               encapsulation.py
+encapsulation               protected and private encapsulation.py
 polymorphism                typical add function or len function
 python package              animal directory setup.py pip install.
