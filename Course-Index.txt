@@ -8,9 +8,10 @@
 6.  Methods and Functions
 7.  Variable scopes
 8.  Errors and Exceptions Handling
-9.  How to write proper program
-10. OOPS concept
-11. Modules and Packages
-12. Numpy and Panda (Foundation for DataScience)
-13. Database(Mysql) with Python
-14. Flask Framework basics (Foundation for Web Developer)
+9. file handling
+10.  How to write proper program
+11. OOPS concept
+12. Modules and Packages
+13. Numpy and Panda (Foundation for DataScience)
+14. Database(Mysql) with Python
+15. Flask Framework basics (Foundation for Web Developer)
