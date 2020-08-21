@@ -1,15 +1,15 @@
-1.  Installation
-2.  Python Object and Data Structure Basics
-3.  Default functions with data types
-4.  Python operators
-     Mathematical operators
-	 Comparison operators
-5.  Loops and Statements
-6.  Methods and Functions
-7.  Variable scopes
-8.  Errors and Exceptions Handling
+1. Installation
+2. Python Object and Data Structure Basics
+3. Default functions with data types
+4. Python operators
+    Mathematical operators
+    Comparison operators
+5. Loops and Statements
+6. Methods and Functions
+7. Variable scopes
+8. Errors and Exceptions Handling
 9. file handling
-10.  How to write proper program
+10. How to write proper program
 11. OOPS concept
 12. Modules and Packages
 13. Numpy and Panda (Foundation for DataScience)
