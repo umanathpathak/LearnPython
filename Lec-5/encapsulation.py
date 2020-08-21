@@ -1,30 +1,22 @@
 #A single underscore: Private variable, it should not be accessed directly. But nothing stops you from doing that (except convention).
-#A double underscore: Private variable, harder to access but still possible.
+#A double underscore: Private variable, but not accessible outside class.
 
-class Robot(object):
+class myGun(object):
    def __init__(self):
-      self.a = 123
-      self._b = 123
-      self.__c = 123
+      self.gunname = "AKM"
+      self._bullet = 7.62
+      self.__rgstno = 12345
 
-obj = Robot()
-print(obj.a)
-print(obj._b)
-print(obj.__c)
-'''
-class Robot(object):
-   def __init__(self):
-      self.__version = 22
+   def getRgstno(self):
+      print(self.__rgstno)
 
-   def getVersion(self):
-      print(self.__version)
+   def setRgstno(self,num):
+      self.__rgstno = num
 
-   def setVersion(self, version):
-      self.__version = version
-
-obj = Robot()
-obj.getVersion()
-obj.setVersion(23)
-obj.getVersion()
-#print(obj.__version)
-'''
+obj = myGun()
+print(obj.gunname)
+print(obj._bullet)
+#print(obj.__rgstno)   #------> This will give error as you can not access variable which has double underscore (__)
+obj.getRgstno()
+obj.setRgstno(67890)
+obj.getRgstno()

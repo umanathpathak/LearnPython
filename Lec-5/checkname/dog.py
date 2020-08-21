@@ -1,3 +1,3 @@
-import animal as an
+import animal
 print("This is dog.py")
 print("The value of __name__ inside dog.py is {}".format(__name__))
