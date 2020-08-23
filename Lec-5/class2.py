@@ -25,21 +25,21 @@ class Bike:
             print("My bike is sport bike")
             #self.avg = "between 20 to 30"
             #self._avg = "between 20 to 30"
-            self.__avg = "between 20 to 30"
+            #self.__avg = "between 20 to 30"
         else:
             print("My bike is not a sport bike")
             #self.avg = "between 30 to 40"
             #self._avg = "between 30 to 40"
-            self.__avg = "between 30 to 40"
+            #self.__avg = "between 30 to 40"
     
     def milage(self):
-        #print("My bike gives milage {}".format(self.avg))
+        print("My bike gives milage {}".format(self.avg))
         #print("My bike gives milage {}".format(self._avg))
-        print("My bike gives milage {}".format(self.__avg))
+        #print("My bike gives milage {}".format(self.__avg))
 
-x = Bike("tvs", 2,"Blue",6,0,160)
+x = Bike("tvs", 2,"Blue",6,0,120)
 x.nature()
 x.milage()
-#print(x.avg)
+print(x.avg)
 #print(x._avg)
 #print(x.__avg)
