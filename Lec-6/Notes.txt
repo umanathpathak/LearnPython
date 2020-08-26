@@ -1,0 +1,8 @@
+#Create virtual environment
+pip install virtualenv
+cd <project dir>
+virtualenv ENV
+pip install mysql-connector-python
+pip freeze
+pip freeze > requirement.txt
+

@@ -15,7 +15,33 @@ def tenadd(num):
 
 print(tenadd(5))
 
+#create a simple function to return the first letter of string in lower case.
+def first_letter(str1):
+    return str1[0].lower()
+    
+#Change the above function into Lambda expression 
+f = lambda str1 : str1[0].lower().lower()
+
+#Lets test it
+first_letter('Asfsd')
+f('Assfsd')
+ 
+#create another lambda expression to join first letters of two strings
+f = lambda str1,str2 : str1[0].lower()+str2[0].upper()
+f('Assfsd','wqrer')
+
+
+#lambda expresssion example
+g = lambda str1:(str1[0].lower() if str1[1] == 'A' else str1[0].upper())
+g('asddf')
+g('dAasd')
+
+g = lambda str1:(str1[0].lower() if str1[1] == 'A' else None)
+
+g('asddf')
+g('dAasd')
+
+
 #lambda function to calculate area of circle
 calc_circle_area = lambda radius : radius * 3.14
 print(calc_circle_area(5))
-

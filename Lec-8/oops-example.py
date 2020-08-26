@@ -1,7 +1,4 @@
-l = [1,5,6,7]
-print(l)
-repr(l)
-
+'''
 #1.Encapsulation
 #2.Inheritance
 #3.Abstraction
@@ -17,7 +14,7 @@ repr(l)
     |      |
 Director Manager
 
-
+'''
 
 class Person():
     pass
