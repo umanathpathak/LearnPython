@@ -1,0 +1,27 @@
+#Write a Tic Tac Toe game
+    #Show welcome msg first
+    #Then ask player what he want to be 'X' or 'O'
+    #Then randomly decide who will play first
+    #get user move from number 1-9 and according to that fill board for user
+    #write move for computer also.
+    #write a logic for each situation
+    
+i.e. 
+
+Welcome to Tic Tac Toe!
+Do you want to be X or O?
+x
+The computer will go first.
+   |   |
+   |   |
+   |   |
+-----------
+   |   |
+   |   |
+   |   |
+-----------
+   |   |
+ O |   |
+   |   |
+
+What is your next move? (1-9)
