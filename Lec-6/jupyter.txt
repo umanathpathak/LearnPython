@@ -1,0 +1,5 @@
+#Create virtual enviornment and activate it
+pip install jupyterlab
+pip install notebook
+#go to your project directory and then execute below command.
+jupyter notebook
