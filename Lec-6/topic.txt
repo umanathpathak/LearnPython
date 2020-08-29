@@ -1,3 +1,8 @@
-create vm   Notes.txt
+create vm   CreateVE.txt
 db connect  db/1mconnect.py
 show db     db/2create.py
+add data    db/3add.py
+view data   db/4view.py
+delete db   db/5drop.py
+numpy       numpy
+pandas      pandas
