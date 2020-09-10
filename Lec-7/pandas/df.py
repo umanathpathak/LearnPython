@@ -7,7 +7,7 @@ Let's use pandas to explore this topic!
 import numpy as np 
 import pandas as pd
 
-df = pd.DataFrame(np.random.randn(5,4),index='A B C D E'.split(),columns='W X Y Z'.split())
+#df = pd.DataFrame(np.random.randn(5,4),index='A B C D E'.split(),columns='W X Y Z'.split())
 #print(df)
 '''
 #Select single column
@@ -84,4 +84,16 @@ df.set_index('States')
 print(df)
 df.set_index('States',inplace=True)
 print(df)
+'''
+
+'''
+# access csv file as dataframe
+csvdf = pd.read_csv(r'C:\Nilesh Indore\Projects\LearnPython\Lec-7\pandas\student.csv')
+print(csvdf.head())
+print(csvdf.columns)
+
+# access xlsx file as dataframe
+xlsxdf = pd.read_excel(r'C:\Nilesh Indore\Projects\LearnPython\Lec-7\pandas\student.xlsx')
+print(xlsxdf.head())
+print(xlsxdf.columns)
 '''
