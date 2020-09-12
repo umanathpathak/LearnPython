@@ -4,4 +4,4 @@ numpy
 pandas
     series          pandas/ser.py
     dataframes      pandas/df.py
-    
+matplotlib          mtpl
