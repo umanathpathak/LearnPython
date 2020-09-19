@@ -8,3 +8,4 @@ Web Server Gateway Interface (WSGI)
 04 - How to serve HTML pages
 05 - Use of Jinja templates to extend page
 06 - Use of Jinja templates to create dynamic pages
+07 - Small flask application using POST method

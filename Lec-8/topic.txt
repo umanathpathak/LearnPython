@@ -1,0 +1,9 @@
+decorators      dec.py
+flask
+    01          how to creat flask application
+    02          how to get data from url
+    03          http method
+    04          how to use template
+    05          how to extend template
+    06          how to use variable with template
+    07          small flask appliation with POST method
