@@ -1,0 +1,18 @@
+#create virtual env and use virtual env
+virtualenv .env
+.env\Scripts\activate.bat
+
+#install boto3 package
+pip install boto3
+pip install awscli
+
+#install aws cli
+You can install aws cli through 2 ways.
+1) By using python package manager
+pip install awscli
+
+2) By downloading aws cli from AWS
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+
+#configure your credential in aws cli
+aws configure
